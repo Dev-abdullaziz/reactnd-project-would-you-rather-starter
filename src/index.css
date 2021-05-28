@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width:100vw;
+}
+
+.dashboard {
+  min-width: 60%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-weight: 900;
+  min-height: 50px;
+  min-width: 250px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.active {
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+
+.question , .user{
+  width: 100%;
+  max-width: 590px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 1px solid #dad7d7;
+  border-radius: 3px;
+}
+
+.Qhead {
+  width: 100%;
+  padding: 0 30px;
+  background-color: rgb(236, 235, 235);
+}
+
+.avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.vs {
+  display: inline-block;
+  border-left: 0.5px solid #ccc ;
+  height: 150px;
+}
+
+.Qinfo {
+  width: 60%;
+}
+
+.Qinfo > h3 {
+margin: 0;
+padding: 10px 0;
+
+}
+
+.Qanswer {
+  color: #969696 ;
+}
+
+.Qbtn {
+  width: 100%;
+  padding:8px 5px;
+  font-size: 16px;
+  color: green;
+  border: 1px solid green;  
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.Qbtn:hover , .Qlink:hover {
+  color: white;
+  font-weight: bold;
+  background-color: green;
+}
+
+.Qlink {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  color: green;
+  border: 1px solid green;  
+  border-radius: 5px;
+}
+
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 100px;
+}
+
+.option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+/* AnsweredQ CSS */
+
+.result {
+  margin: 10px 0;
+  border: 2px solid lightseagreen;
+  border-radius: 5px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.result p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 25px;
+  text-align: center;
+  background-color: #dad7d7;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: lightseagreen;
+  color: white;
+}
+
+.chosen {
+  background-color: rgb(209, 253, 240);
+  color: lightseagreen;
+}
+
+.chosen-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chosen-container p {
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.chosen-label {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gold;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+
+/* New Question Page */
+
+.NewQ { 
+width: 500px;  
+border: 1px solid #dad7d7;
+}
+
+.NewQhead {
+  background-color: #dad7d7;
+  border: 1px sold #dad7d7;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.NewQbody {
+  padding: 20px;
+}
+
+.NewQbody input {
+  width: 100%;
+  background-color: aliceblue;
+  border: 0.5px solid #dad7d7;
+  padding: 10px 0 ;
+  text-align: center;
+}
+
+.seperator {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50px;
+}
+.seperator hr {
+  display: inline-block;
+  width: 45%;
+}
+
+.seperator span {
+  margin: 0 10px;
+}
+
+.NewQbtn {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: cadetblue;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.NewQbtn:hover {
+  box-shadow: 3px 3px 3px #dad7d7;
+  background-color: darkcyan;
+}
+
+/* User component */
+
+.user h3 {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.userInfo {
+  padding: 20px;
+}
+
+.userData {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userScore {
+  margin: 20px;
+  height: 100%;
+  width: 100px;
+  border: 1px solid #dad7d7;
+}
+
+.userScore > div {
+  display: flex;
+  justify-content: center;
+}
+
+.userScore h4 {
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  background-color: #dad7d7 ;
+}
+
+.userScore p {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkcyan;
+  border-radius: 50%;
+  color: white;
+}
+
+.login {
+  min-width: 400px;
+  text-align: center;
+  border: 1px solid #dad7d7;
+  margin-top: 10%;
+}
+
+.loginHead {
+  background-color: #dad7d7;
+  padding: 20px 50px;
+  margin-bottom: 20px;
+}
+
+.loginHead h3 , .loginHead p {
+  margin: 0;
+}
+
+.login h4 {
+  color: cadetblue;
+}
+
+.login select {
+  width: 90%;
+  padding: 10px;
+  border-color:#dad7d7 ;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.loginBtn {
+  width: 90%;
+  padding: 10px;
+  background-color: cadetblue;
+  border: 1px solid #dad7d7;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  color: white;
+  font-weight: bold;
+  background-color: darkcyan;
+}
+
+/* Nav Component */
+
+.nav {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid green;
+  position: fixed;
+  left: 0;
+  margin-bottom: 100px;
+  background-color: white;
+  z-index: 2;
+  display: flex;
+}
+
+.nav ul {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li {
+  display: inline-block;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  width: 100px;
+  color: green;
+  font-weight: bold ;
+}
+
+.nav li a:hover {
+  background-color: green;
+  color: white;
+}
+.greetings {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greetingsAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px 20px ;
+}
+
+.signOutBtn {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.signOutBtn:hover {
+  background-color: red;
+  color: white;
+}
+
+
+/* 404 error */
+
+.error {
+  text-align: center;
+}
