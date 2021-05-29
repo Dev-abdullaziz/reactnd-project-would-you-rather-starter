@@ -26,8 +26,8 @@ class AnsweredQ extends Component {
                     <h3>Results:</h3>
                     <div className={optionOne.includes(authedUser) ? 'result chosen': 'result'}>
                         <p>{`Would you rather ${question.optionOne.text}`}</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style={{width: `${optionOne.length/votes.length*100}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{`${((optionOne.length/votes.length)*100).toString().substring(0,4)}%`}</div>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width: `${optionOne.length/votes.length*100}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{`${((optionOne.length/votes.length)*100).toString().substring(0,4)}%`}</div>
                         </div>
                         <div className='chosen-container'>
                             <p>{`${optionOne.length} out of ${votes.length} Votes`}</p>
@@ -36,8 +36,8 @@ class AnsweredQ extends Component {
                     </div>
                     <div className={optionTwo.includes(authedUser) ? 'result chosen': 'result'}>
                         <p>{`Would you rather ${question.optionTwo.text}`}</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style={{width: `${optionTwo.length/votes.length*100}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{`${((optionTwo.length/votes.length)*100).toString().substring(0,4)}%`}</div>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" style={{width: `${optionTwo.length/votes.length*100}%`}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{`${((optionTwo.length/votes.length)*100).toString().substring(0,4)}%`}</div>
                         </div>
                         <div className='chosen-container'>
                             <p>{`${optionTwo.length} out of ${votes.length} Votes`}</p>
