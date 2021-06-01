@@ -40,6 +40,7 @@ class Dashboard extends Component {
                             } else if(!this.state.answeredTab && !votes.includes(authedUser)) {
                                 return <li key={q}><Question id={q}/></li>
                             }
+                            return null
                         }
                         )}
                     </ul>
